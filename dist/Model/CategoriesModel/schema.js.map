@@ -1,0 +1,1 @@
+{"version":3,"file":"schema.js","sourceRoot":"","sources":["../../../src/Model/CategoriesModel/schema.ts"],"names":[],"mappings":";;AAAA,uCAA+B;AAE/B,MAAM,gBAAgB,GAAG,IAAI,kBAAQ,CAAC,MAAM,CAAC;IACzC,cAAc,EAAC,EAAC,IAAI,EAAC,MAAM,EAAC,OAAO,EAAC,IAAI,EAAC;CAC5C,EAAC,EAAC,UAAU,EAAC,IAAI,EAAC,CAAC,CAAA;AACpB,kBAAe,kBAAQ,CAAC,KAAK,CAAC,kBAAkB,EAAC,gBAAgB,CAAC,CAAA"}
