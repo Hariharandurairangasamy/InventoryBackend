@@ -1,14 +1,15 @@
-import express,{Application}  from "express";
-import bodyParser from "body-parser";
-import cors from "cors"
+import * as express from 'express';
+import * as bodyParser from "body-parser";
+import * as cors from "cors"
 import mongoose from "mongoose";
- import { AppRoutes } from "./src/Routes/routes";
+ import { AppRoutes } from "./Routes/routes";
+
 
 const dotenv = require('dotenv');
 
 class App{
 
-    public app:Application;
+    public app:express.Application;
     public ENV =dotenv.config().env?.parsed
      private routeAppRoutes:AppRoutes = new AppRoutes()
     constructor(){
