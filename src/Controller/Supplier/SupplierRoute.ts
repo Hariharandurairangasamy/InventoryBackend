@@ -10,11 +10,11 @@ class SuppliersRoute{
         this.init()
     }
     init():void{
-        this.router.post("/create",this.SupplierRouter.supplierPost)
-        this.router.get("/fetch",this.SupplierRouter.getSupplierRoute)
-        this.router.get("/fetchUniqueData/:id",this.SupplierRouter.getUniqueSupplierData)
+        this.router.post("/createSupplier",this.SupplierRouter.supplierPost)
+        this.router.get("/fetchSupplier",this.SupplierRouter.getSupplierRoute)
+        this.router.get("/fetchUniqueDataSupplier/:id",this.SupplierRouter.getUniqueSupplierData)
         this.router.delete("/deletSuppliers/:id",this.SupplierRouter.deleteSuppliersData)
-        this.router.patch("/editsupplier/:id",this.SupplierRouter.editSuppliersData)
+        this.router.patch("/editSupplier/:id",this.SupplierRouter.editSuppliersData)
     }
 }
 const SuppliersData = new SuppliersRoute()
