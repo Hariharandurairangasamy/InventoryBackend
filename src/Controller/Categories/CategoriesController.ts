@@ -35,6 +35,18 @@ public async getCategoriesData(req:Request,res:Response){
         logger.error(err)
     }
 }
+public async getUniqeCategoriesData(req:Request,res:Response){
+    try{
+        const getCategoriesData = await CategoriesSchema.findById(req.params.id)
+        if(getCategoriesData){
+            res.status(statusCode.success).json({message:"Data Fetched SuccessFully",getCategoriesData})
+        }else{
+            res.status(statusCode.badRequest).json({mesaage:"Datas are not fecthed"})
+        }
+    }catch(err){
+        logger.error(err)
+    }
+}
 public async editCateCoriesData(req:Request,res:Response){
     try{
         const editCategories = await CategoriesSchema.findByIdAndUpdate(req.params.id,{$set:req.body})

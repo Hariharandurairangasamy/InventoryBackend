@@ -14,6 +14,7 @@ class CategoriesAppRoutes{
    this.router.get("/getCategoriesData",this.CategoriesController.getCategoriesData)
    this.router.patch("/editCategories/:id",this.CategoriesController.editCateCoriesData)
    this.router.delete("/deleteCategories/:id",this.CategoriesController.deleteCategories)
+   this.router.get("/getUniqueCateoriesData/:id",this.CategoriesController.getUniqeCategoriesData)
     }
 }
 const getCategoriesRouter =  new CategoriesAppRoutes()
