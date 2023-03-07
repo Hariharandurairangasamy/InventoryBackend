@@ -22,6 +22,7 @@ class App{
       this.routeAppRoutes.CategoriesData(this.app)
       this.routeAppRoutes.ProductRoutes(this.app)
       this.routeAppRoutes.CustomerRoutes(this.app)
+      this.routeAppRoutes.UserRouters(this.app)
      
     }
  
