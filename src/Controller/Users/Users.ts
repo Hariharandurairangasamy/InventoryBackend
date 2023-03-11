@@ -1,4 +1,4 @@
-import { Request,Response } from "express";
+import { NextFunction, Request,Response } from "express";
 import Users from "../../Model/UsersModel/schema";
 import logger from "../../Middleware/logger";
 import * as bcrypt from "bcrypt"
@@ -18,6 +18,7 @@ export default class UsersController{
             const postUsersData = await Users.create({
                 userName:req.body.userName,
                 password:hashPassword,
+                role:req.body.role,
                 isPermission:req.body.isPermission
             })
             const saveUserData = await postUsersData.save()
@@ -55,23 +56,26 @@ export default class UsersController{
 
         }
     }
-    public async userLogin(req:Request,res:Response){
+    public async userLogin(req:Request,res:Response,next:NextFunction){
         try{
             const {userName,password}=req.body
+           
             if(!(userName && password)) res.status(statusCode.badRequest).json({message:"All inputs are required"})
             const getUserName = await Users.findOne({userName})
             if(getUserName && (await bcrypt.compare(password, getUserName.password))){
                 const getToken =  jwt.sign({userName},process.env.JWT_SECROT_KET, {
                     expiresIn: "2h",
                   })
-                  res.status(statusCode.success).json({message:"loggin SuccessFully",data:{userName:userName,token:getToken}})
+            
+               res.status(statusCode.success).json({message:"loggin SuccessFully",data:{userName:userName,role:getUserName?.role,permission:getUserName?.isPermission,token:getToken}})     
+
             }else{
-                res.status(statusCode.badRequest).json({message:"loggin error"})
+                return res.status(statusCode.badRequest).json({message:"loggin error"})
             }
            
         }catch(err){
             logger.error(err)
-            res.status(statusCode.internalServerError).json({messsage:"Internel server error"})
+            return res.status(statusCode.internalServerError).json({messsage:"Internel server error"})
         }
     }
 

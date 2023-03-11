@@ -12,10 +12,29 @@ class App{
     public app:express.Application;
     public ENV =dotenv.config().env?.parsed
      private routeAppRoutes:AppRoutes = new AppRoutes()
+
+
+private config():void{
+  this.app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Expose-Headers', 'x-total-count')
+    res.header(
+        'Access-Control-Allow-Methods',
+        'GET,PUT,POST,DELETE,PATCH'
+    )
+    res.header(
+        'Access-Control-Allow-Headers',
+        'Content-Type,authorization'
+    )
+    next()
+})
+}
+     
     constructor(){
         this.app = express();
         this.middleWareConfig();
         this.routeConfig();
+        this.config()
          this.dbConnection();
       this.routeAppRoutes.SupplierAppRoute(this.app)
       this.routeAppRoutes.UnitsRouterData(this.app)
@@ -29,6 +48,7 @@ class App{
 private middleWareConfig():void{
    
     this.app.use(bodyParser.json());
+   // this.app.use(bodyParser.urlencoded({extended:true}))
     this.app.use(express.json())
     this.app.use(express.urlencoded({extended:true}))
     this.app.use(cors())
@@ -49,6 +69,7 @@ private dbConnection(){
         console.log("database connected",`${process.env.MONGO_DB_CONNECTION}`)
     })
 }
+
 
 }
 

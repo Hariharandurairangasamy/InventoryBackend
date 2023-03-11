@@ -13,7 +13,7 @@ class UsersRouotes{
     init():void{
         this.router.post("/postUserData",this.authMiddleware.routeAuthMiddleware,this.UsersController.PostUsers)
         this.router.get("/getUsers",this.authMiddleware.routeAuthMiddleware,this.UsersController.getUserData)
-        this.router.delete("/deleteUsers/:id",this.UsersController.deleteuserData)
+        this.router.delete("/deleteUsers/:id",this.authMiddleware.routeAuthMiddleware,this.UsersController.deleteuserData)
         this.router.post("/userLogin",this.UsersController.userLogin)
     }
 }
