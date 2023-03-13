@@ -5,6 +5,7 @@ import CategoriesRoutes from "../Controller/Categories/CategoriesRoutes"
 import ProductRoutes from "../Controller/Products/ProductRoutes"
 import CustomerRoute from "../Controller/Customers/CustomerRoute"
 import UsersRoute from "../Controller/Users/UsersRoute"
+import PurchaseController from "../Controller/Purchase/PurchaseRouter"
 
 export class AppRoutes{
     public SupplierAppRoute(app:Application){
@@ -25,5 +26,9 @@ export class AppRoutes{
     public UserRouters(app:Application)
    {
     app.use("/api/inventory",UsersRoute)
+   }
+   public purchaseRouter(app:Application)
+   {
+    app.use("/api/inventory",PurchaseController)
    }
 }
