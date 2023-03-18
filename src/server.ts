@@ -43,6 +43,7 @@ private config():void{
       this.routeAppRoutes.CustomerRoutes(this.app)
       this.routeAppRoutes.UserRouters(this.app)
       this.routeAppRoutes.purchaseRouter(this.app)
+      this.routeAppRoutes.EmployeesRouter(this.app)
      
     }
  
