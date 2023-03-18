@@ -44,6 +44,7 @@ private config():void{
       this.routeAppRoutes.UserRouters(this.app)
       this.routeAppRoutes.purchaseRouter(this.app)
       this.routeAppRoutes.EmployeesRouter(this.app)
+      this.routeAppRoutes.AttendenceRouter(this.app)
      
     }
  
