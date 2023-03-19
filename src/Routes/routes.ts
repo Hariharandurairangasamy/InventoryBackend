@@ -8,6 +8,7 @@ import UsersRoute from "../Controller/Users/UsersRoute"
 import PurchaseController from "../Controller/Purchase/PurchaseRouter"
 import EmployeesController from "../Controller/Employees/EmployeesRouter"
 import attendenceRouter from "../Controller/Attendence/attendenceRouter"
+import SalseProduct from "../Controller/SaleProduct/SalseRouter"
 
 export class AppRoutes{
     public SupplierAppRoute(app:Application){
@@ -40,5 +41,9 @@ export class AppRoutes{
    public AttendenceRouter(app:Application)
    {
     app.use("/api/inventory",attendenceRouter)
+   }
+   public SalesRouter(app:Application)
+   {
+    app.use("/api/inventory",SalseProduct)
    }
 }
