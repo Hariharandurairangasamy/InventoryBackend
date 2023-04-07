@@ -76,5 +76,37 @@ export default class PurchaseController{
             res.status(statusCode.internalServerError)
         }
     }
+    public async updateManyDatas(req:Request,res:Response,next){
+   try{
+    
+    const getPurchasedatas = await Purchase.find()
+    const getReqBodyData  =  req.body
+ const updateSalesProductsDatas =  getPurchasedatas?.map((getPurchaseData:any)=>{
+        getReqBodyData?.forEach((values:any)=>{
+           if(getPurchaseData?.customerName === values?.customerName){
+            getPurchaseData?.isPurchaseProducts?.forEach(async(val:any,idx:number)=>{
+                const getProducts:any = await values?.isPurchaseProducts[idx]
+                const reduceQty = await val?.qty + getProducts?.QTY
+               return await Purchase.updateMany({"isPurchaseProducts.category":getProducts.category,"isPurchaseProducts.productName":getProducts.productName},{$set:{"isPurchaseProducts.$.qty":reduceQty}},{})
+              
+            })
+           }
+        })
+        
+         
+    })
+    if(!updateSalesProductsDatas){
+        return  res.status(statusCode.badRequest).json({message:"Datas are not uploading"})
+     
+    }
+    return  res.status(statusCode.success).json({message:"Datas Updated SuccessFully"})
+   
+   }catch(err){
+    logger.error(err)
+    console.log(err)
+    res.status(statusCode.internalServerError)
+   }
+
+    }
 
 }

@@ -126,3 +126,51 @@
 [2023-03-18T16:59:38.148Z] [31merror[39m: Missing required parameter - public_id
 [2023-03-18T17:47:12.224Z] [31merror[39m: values.filter is not a function
 [2023-03-18T17:51:01.381Z] [31merror[39m: productDatas.filter is not a function
+[2023-03-26T05:27:32.482Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-03-26T05:27:52.487Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-03-28T15:51:06.864Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-03-28T15:51:26.858Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-03-28T16:57:41.633Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-03-28T16:58:01.648Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T04:38:45.945Z] [31merror[39m: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+[2023-04-01T05:08:43.299Z] [31merror[39m: connect ETIMEDOUT 64:ff9b::4100:c84f:27017
+[2023-04-01T05:08:48.479Z] [31merror[39m: connect ETIMEDOUT 64:ff9b::4100:c84f:27017
+[2023-04-01T05:08:52.744Z] [31merror[39m: connect ETIMEDOUT 64:ff9b::4100:c84f:27017
+[2023-04-01T05:08:52.782Z] [31merror[39m: connect ETIMEDOUT 64:ff9b::4100:c84f:27017
+[2023-04-01T05:08:52.785Z] [31merror[39m: connect ETIMEDOUT 64:ff9b::4100:c84f:27017
+[2023-04-01T05:12:19.236Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:12:39.262Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:13:54.223Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:13:54.411Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:15:28.532Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:15:28.552Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:19:31.847Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:19:51.897Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:28:32.034Z] [31merror[39m: Operation `puchaseschemas.findOneAndDelete()` buffering timed out after 10000ms
+[2023-04-01T05:32:07.962Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:32:27.961Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:35:25.454Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:36:43.249Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:37:26.819Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:38:06.850Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:38:34.196Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:38:54.256Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:40:27.948Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:43:15.898Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:44:14.002Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:46:38.717Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:47:59.590Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:48:19.631Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:50:09.626Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T05:50:26.140Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T06:06:30.185Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T06:06:50.201Z] [31merror[39m: Cast to ObjectId failed for value "1" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-01T16:18:44.386Z] [31merror[39m: Operation `usersschemas.findOne()` buffering timed out after 10000ms
+[2023-04-02T01:17:53.453Z] [31merror[39m: Operation `usersschemas.findOne()` buffering timed out after 10000ms
+[2023-04-02T10:03:37.264Z] [31merror[39m: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+[2023-04-02T11:06:36.656Z] [31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-02T11:47:50.450Z] [31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-02T11:52:33.010Z] [31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-06T15:34:38.926Z] [31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-06T16:52:44.879Z] [31merror[39m: getReqBodyData.foreach is not a function
+[2023-04-07T15:29:06.491Z] [31merror[39m: Cannot access 'updateSalesProductsDatas' before initialization

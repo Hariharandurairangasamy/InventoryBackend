@@ -13,7 +13,8 @@ class PurchaseRouter{
         this.router.get("/getPurchaseData",this.PurchaseController.getPurchaseData)
         this.router.patch("/updatePurchaseData/:id",this.PurchaseController.updatePurchase)
         this.router.get("/getUniquePurchase/:id",this.PurchaseController.getUniquePurchaseData)
-        this.router.delete("/deletePurchaseDtaa/:id",this.PurchaseController.dletePurchase)
+        this.router.delete("/deletePurchaseData/:id",this.PurchaseController.dletePurchase)
+        this.router.post("/postSalseUpdateData",this.PurchaseController.updateManyDatas)
     }
 }
 const postPurchaseData = new PurchaseRouter()
