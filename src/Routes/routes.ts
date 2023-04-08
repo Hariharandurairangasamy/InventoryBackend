@@ -9,6 +9,7 @@ import PurchaseController from "../Controller/Purchase/PurchaseRouter"
 import EmployeesController from "../Controller/Employees/EmployeesRouter"
 import attendenceRouter from "../Controller/Attendence/attendenceRouter"
 import SalseProduct from "../Controller/SaleProduct/SalseRouter"
+import  GetAllRoutesData  from "../Controller/GetAllRoutesDatas/AllRoutesRouter"
 
 export class AppRoutes{
     public SupplierAppRoute(app:Application){
@@ -45,5 +46,10 @@ export class AppRoutes{
    public SalesRouter(app:Application)
    {
     app.use("/api/inventory",SalseProduct)
+   }
+
+   public GetAllRoutesDatas(app:Application)
+   {
+    app.use("/api/inventory",GetAllRoutesData)
    }
 }

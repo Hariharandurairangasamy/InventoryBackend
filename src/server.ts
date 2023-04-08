@@ -46,6 +46,7 @@ private config():void{
       this.routeAppRoutes.EmployeesRouter(this.app)
       this.routeAppRoutes.AttendenceRouter(this.app)
       this.routeAppRoutes.SalesRouter(this.app)
+      this.routeAppRoutes.GetAllRoutesDatas(this.app)
      
     }
  
