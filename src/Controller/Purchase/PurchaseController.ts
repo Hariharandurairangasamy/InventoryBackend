@@ -9,7 +9,11 @@ export default class PurchaseController{
         try{
            const postPurchaseData = await Purchase.create(req.body)
            const savePurchaseData = await postPurchaseData.save()
-           if (savePurchaseData) res.status(statusCode.success).json({message:"PurchaseData",data:savePurchaseData})
+           if (savePurchaseData){ 
+            res.status(statusCode.success).json({message:"PurchaseData added sucessfully",data:savePurchaseData})
+        }else{
+            res.status(statusCode.badRequest).json({message:"Purchase data is not added"})
+        }
 
         }catch(err){
             logger.error(err)
