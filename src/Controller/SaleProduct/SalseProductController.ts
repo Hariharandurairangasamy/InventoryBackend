@@ -1,12 +1,15 @@
 import { Request,Response } from "express";
 import { statusCode } from "../../utils/Constent";
 import logger from "../../Middleware/logger"
+import NodeMailer from "../../utils/Nodemailer";
 import Purchase from "../../Model/Purchase/schema"
 import productData from "../../Model/productSalse/schema"
 
 export default class SalseProductController{
     public async postSalseData(req:Request,res:Response){
         try{
+            const NodeMailers = new NodeMailer()
+            const gmail = "harishyuvi2124@gmail.com"
         // QTY Updated for Purchase Collection
             const getPurchaseData = await Purchase.find()
             const productDatas = req.body
@@ -17,6 +20,7 @@ export default class SalseProductController{
                         const reduceQty = await getValues?.qty - values?.qty
                         const updateSaleProductsData = await Purchase.updateMany({"isPurchaseProducts.category":values.category,"isPurchaseProducts.productName":values.productName},{$set:{"isPurchaseProducts.$.qty":reduceQty}},{})
                         if(updateSaleProductsData){
+                         
                             res.status(statusCode.success).json({message:"Qty Updated SuccessFully",data:updateSaleProductsData})
                         }else{
                             res.status(statusCode.badRequest).json({message:"Qty is not Updated "})
@@ -29,6 +33,7 @@ export default class SalseProductController{
             const postProdcutsData = await productData.create(req.body)
             const saveProductData = await postProdcutsData.save()
             if(saveProductData){
+                NodeMailers.sentNodemail(gmail)
                 res.status(statusCode.success).json({message:"Data Added SuccessFully",data:saveProductData})
             }else{
                 res.status(statusCode.badRequest).json({message:"Data is Not Added"})
