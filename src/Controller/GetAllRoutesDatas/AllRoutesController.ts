@@ -1,7 +1,8 @@
 import { Request,Response } from "express";
 import { statusCode } from "../../utils/Constent";
-import logger from "../../Middleware/logger"
 import purchaseSchema from "../../Model/Purchase/schema"
+import callsSchema from "../../Model/Calls/schema"
+import logger from "../../Middleware/logger";
 
 export class GetAllRoutesData{
     public async getRoutesData(req:Request,res:Response){
@@ -33,5 +34,15 @@ export class GetAllRoutesData{
         }catch(err){
             
         }
+    }
+    public async getCalls(req:Request,res:Response){
+      try{
+        const findCalls = await callsSchema.find()
+        console.log("findCalls",findCalls)
+      }catch(err){
+        logger.error(err)
+        console.error(err)
+
+      }
     }
 }
