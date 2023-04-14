@@ -182,3 +182,9 @@
 [2023-04-08T14:41:57.224Z] [31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "puchaseSchema"
 [2023-04-09T01:54:53.201Z] [31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "puchaseSchema"
 [2023-04-09T01:56:35.235Z] [31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "puchaseSchema"
+[2023-04-14T02:18:23.058Z] [31merror[39m: Cannot read properties of undefined (reading 'collection')
+[2023-04-14T02:22:37.660Z] [31merror[39m: db.collection is not a function
+[2023-04-14T02:27:13.494Z] [31merror[39m: Cannot read properties of undefined (reading 'collection')
+[2023-04-14T02:30:46.174Z] [31merror[39m: Cannot read properties of undefined (reading 'collection')
+[2023-04-14T02:31:47.549Z] [31merror[39m: Cannot read properties of undefined (reading 'collection')
+[2023-04-14T02:33:39.315Z] [31merror[39m: Cannot read properties of undefined (reading 'connect')

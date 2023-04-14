@@ -11,7 +11,7 @@ class AppGetAllRoutes{
     }
     init():void{
         this.router.get("/getAllDatas",this.GetAllRoutesData.getRoutesData)
-        this.router.get("/getCallData",this.GetAllRoutesData.getCalls)
+    
     }
 }
 const getallDatasRoute = new AppGetAllRoutes()
